@@ -1,0 +1,13 @@
+1. Loading Data: Metadata.csv is read as a Pandas DataFrame with the pd.read_csv() function.
+
+2. Data Preprocessing: The code uses the dropna() function to delete rows containing missing values in the columns Battery_impedance, Re, Rct, and Cycle.
+
+3. Making Subplots:
+
+The function make_subplots() from Plotly creates a figure with three rows; each row will have one of the plots of the three parameters, Battery_impedance, Re, and Rct, along with a shared x-axis that corresponds to the cycle number.
+This uses go.Scatter() to generate a line plot of each parameter across the cycles.
+
+4. Adding Title and Labels for each Subplot: Adding Titles and labels to each axis for readability.
+ 
+5. Drawing the Plot: fig.show() will show an interactive version with zoom, hover capabilities. 
+The above code enables you to see how internal parameters of a battery evolve over the course of ageing-thus through charge/discharge cycles.
